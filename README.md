@@ -2,8 +2,8 @@
 
 This is a lightweight, fully offline mobile app (built using Python and Kivy) that replicates essential features of [Smallpdf](https://smallpdf.com/) for personal use. The app enables you to manage PDF documents directly from your phone—without internet access or subscription limits.
 
-> ✅ Designed for **Android**
-> 🧠 Built entirely using **Python**
+> ✅ Designed for **Android**\
+> 🧠 Built entirely using **Python**\
 > 🔐 No ads, no trackers, no cloud — your documents stay local.
 
 ---
@@ -25,7 +25,7 @@ This is a lightweight, fully offline mobile app (built using Python and Kivy) th
 
 ```bash
 
-smallpdf\_clone/
+smallpdf_clone/
 ├── main.py                  # Entry point
 ├── buildozer.spec           # Android build config
 ├── requirements.txt         # Python dependencies
