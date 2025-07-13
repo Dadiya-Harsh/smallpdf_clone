@@ -3,6 +3,27 @@ revision = 2
 requires-python = ">=3.12"
 
 [[package]]
+name = "asyncgui"
+version = "0.6.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/be/44/e697dc6f6e2e564c34135f743bf701ae223ac52885646f5a1bd66dcd8b0a/asyncgui-0.6.3.tar.gz", hash = "sha256:05de49c2221128d3530f010df98491f3553183ec8909d205a0c0250bee5d6e0c", size = 9177, upload_time = "2024-06-27T11:45:18.33Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/1c/00470dc25b1e63506fb3087389207571fdb094ce76861f9ce29e6832b57f/asyncgui-0.6.3-py3-none-any.whl", hash = "sha256:46723e65d8bf023e28d141f6a9d38634ef5b97a5236fafdaf80b47e13275a5eb", size = 9145, upload_time = "2024-06-27T11:45:16.18Z" },
+]
+
+[[package]]
+name = "asynckivy"
+version = "0.6.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asyncgui" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bd/d8/7412fbb4584bf8389aa387a085ab02b49b4885387ac26187b30552f8c88a/asynckivy-0.6.4.tar.gz", hash = "sha256:58c34876a2422464f39df120b659c8b22e044852dd7ff94c5b9cb9dad84e902b", size = 15576, upload_time = "2024-08-20T10:45:29.158Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c0/f3/11ed2f527e0fde70d2c693ff64e6893285d3ae4b08666e808929d6234579/asynckivy-0.6.4-py3-none-any.whl", hash = "sha256:4e26bb6dbc9768d5ca593bae7b36927c06e43915c44b02ddcaa64dc223a2d5e2", size = 18646, upload_time = "2024-08-20T10:45:27.444Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2025.7.9"
 source = { registry = "https://pypi.org/simple" }
@@ -154,13 +175,40 @@ wheels = [
 
 [[package]]
 name = "kivymd"
-version = "1.2.0"
-source = { registry = "https://pypi.org/simple" }
+version = "2.0.1.dev0"
+source = { url = "https://github.com/kivymd/KivyMD/archive/master.zip" }
 dependencies = [
+    { name = "asynckivy" },
     { name = "kivy" },
+    { name = "materialyoucolor" },
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/20/81/0b1154f5e581d5910702d9fadb3217f56cb186f72c8b36de0271e7ff9b5c/kivymd-1.2.0.tar.gz", hash = "sha256:2d33e2c59259998e93aee55acde647a4a20e5a0f962469db24ee4c9ec586962e", size = 2160842, upload_time = "2024-01-21T10:49:26.401Z" }
+sdist = { hash = "sha256:b36906b74414156b2fda8f3fb960612e03fbbeed9e483bbacfdf4807093c4468" }
+
+[package.metadata]
+requires-dist = [
+    { name = "asynckivy", specifier = ">=0.6,<0.7" },
+    { name = "black", marker = "extra == 'dev'" },
+    { name = "coveralls", marker = "extra == 'dev'" },
+    { name = "flake8", marker = "extra == 'dev'" },
+    { name = "isort", extras = ["pyproject"], marker = "extra == 'dev'" },
+    { name = "kivy", specifier = ">=2.3.0" },
+    { name = "materialyoucolor", specifier = ">=2.0.7" },
+    { name = "pillow" },
+    { name = "pre-commit", marker = "extra == 'dev'" },
+    { name = "pyinstaller", extras = ["hook-testing"], marker = "extra == 'dev'" },
+    { name = "pytest", marker = "extra == 'dev'" },
+    { name = "pytest-asyncio", marker = "extra == 'dev'" },
+    { name = "pytest-cov", marker = "extra == 'dev'" },
+    { name = "pytest-timeout", marker = "extra == 'dev'" },
+    { name = "sphinx", marker = "extra == 'docs'", specifier = "==7.3.7" },
+    { name = "sphinx-autoapi", marker = "extra == 'docs'", specifier = "==3.0.0" },
+    { name = "sphinx-book-theme", marker = "extra == 'docs'" },
+    { name = "sphinx-copybutton", marker = "extra == 'docs'" },
+    { name = "sphinx-notfound-page", marker = "extra == 'docs'" },
+    { name = "sphinx-tabs", marker = "extra == 'docs'" },
+]
+provides-extras = ["dev", "docs"]
 
 [[package]]
 name = "lxml"
@@ -200,6 +248,20 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5f/01/d48cc141bc47bc1644d20fe97bbd5e8afb30415ec94f146f2f76d0d9d098/lxml-6.0.0-cp313-cp313-win32.whl", hash = "sha256:5fcd7d3b1d8ecb91445bd71b9c88bdbeae528fefee4f379895becfc72298d181", size = 3612896, upload_time = "2025-06-26T16:27:04.251Z" },
     { url = "https://files.pythonhosted.org/packages/f4/87/6456b9541d186ee7d4cb53bf1b9a0d7f3b1068532676940fdd594ac90865/lxml-6.0.0-cp313-cp313-win_amd64.whl", hash = "sha256:2f34687222b78fff795feeb799a7d44eca2477c3d9d3a46ce17d51a4f383e32e", size = 4013132, upload_time = "2025-06-26T16:27:06.415Z" },
     { url = "https://files.pythonhosted.org/packages/b7/42/85b3aa8f06ca0d24962f8100f001828e1f1f1a38c954c16e71154ed7d53a/lxml-6.0.0-cp313-cp313-win_arm64.whl", hash = "sha256:21db1ec5525780fd07251636eb5f7acb84003e9382c72c18c542a87c416ade03", size = 3672642, upload_time = "2025-06-26T16:27:09.888Z" },
+]
+
+[[package]]
+name = "materialyoucolor"
+version = "2.0.10"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/83/b3/8835bacf50ea32bf000f9118f60da4c8e5febe80ab5929be18ce99a4baea/materialyoucolor-2.0.10.tar.gz", hash = "sha256:31b4d407b9a4fd4b54b30559b0d0313f6d6da1f9d19b75546ed65da52671ea76", size = 250103, upload_time = "2025-01-09T07:56:43.05Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/e8/847974020cde0e09124d7fb51bf41aa92cc3a9cad83f83911e5d67c1d665/materialyoucolor-2.0.10-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:0fc0b43a684536270177b71bf509b247dab4ff816e49d1ac1b124fc1a32e082e", size = 318810, upload_time = "2025-01-09T09:02:52.905Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/67/2f3e70d707f86be3c541327693db5105622aa6aa1079d48ff90876d2e650/materialyoucolor-2.0.10-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:7fe5bbc63124c3ea2f5560ea4a5250af72fce9ab55d29925e6bac7c7ec65329d", size = 208373, upload_time = "2025-01-09T08:34:35.656Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/f2/1119e97e741b33717e26c494b4aa3c5ca57d770df4fa42707b698bfb7588/materialyoucolor-2.0.10-cp312-cp312-win_amd64.whl", hash = "sha256:aedc8596fd7583fd9e23f3e6d4f7b9defd7d5ef6e7889967814b9900c1e3d5b3", size = 151716, upload_time = "2025-01-09T09:02:57.1Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/49/c4517231ec21bdd91a301cb40fdf86c632a95b10d86bc3278bd5d619480c/materialyoucolor-2.0.10-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:71de9c581c8227c3010c61108a00af9a007c96f99358fdb0628626d0ade817d9", size = 318890, upload_time = "2025-01-09T09:02:52.276Z" },
+    { url = "https://files.pythonhosted.org/packages/4d/62/807bea1db749dc45debc2afa51ea4b27f5a219fbe73f6458c2bae2a15427/materialyoucolor-2.0.10-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:978748eca7725d8b569cdecfd9f86a8e34bf946182f79a48b059c98a10f1a0de", size = 208339, upload_time = "2025-01-09T08:34:38.213Z" },
+    { url = "https://files.pythonhosted.org/packages/2a/01/05075b959b228c5c99c80703b7c63532ac6ee49abdf8054077e70908d6e3/materialyoucolor-2.0.10-cp313-cp313-win_amd64.whl", hash = "sha256:2ffc8963a2f10d8acb6776e60e97f0e7929d3392eb282cf2bc63b8e56cd930b3", size = 151751, upload_time = "2025-01-09T09:02:53.299Z" },
 ]
 
 [[package]]
@@ -499,7 +561,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "kivy", specifier = ">=2.3.1" },
-    { name = "kivymd", specifier = ">=1.2.0" },
+    { name = "kivymd", url = "https://github.com/kivymd/KivyMD/archive/master.zip" },
     { name = "opencv-python", specifier = ">=4.12.0.88" },
     { name = "pdf2image", specifier = ">=1.17.0" },
     { name = "pikepdf", specifier = ">=9.9.0" },
