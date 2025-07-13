@@ -1,0 +1,14 @@
+kivy
+kivymd
+
+PyPDF2           # For merging, splitting, etc.
+pikepdf         # For compression, encryption
+reportlab        # For generating PDFs
+pillow         # For image processing
+opencv-python # For scan/image enhancement
+pytesseract     # OCR from image
+pdf2image       # Convert PDF pages to images
+python-docx      # Convert to Word (basic text)
+
+# Optional for advanced UI or storage
+plyer            # Access file chooser, battery, etc.
