@@ -1,0 +1,97 @@
+# screens/home.kv
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+<HomeScreen>:
+    name: "home"
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: dp(20)
+        spacing: dp(10)
+
+        # App title
+        MDLabel:
+            text: "SmallPDF Clone"
+            halign: "center"
+            theme_text_color: "Primary"
+            font_style: "H5"
+            size_hint_y: 0.2
+
+        # Scrollable grid of feature buttons
+        MDScrollView:
+            MDGridLayout:
+                cols: 2
+                adaptive_height: True
+                padding: dp(10)
+                spacing: dp(10)
+
+                MDRaisedButton:
+                    text: "Merge PDFs"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "merge"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Split PDFs"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "split"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Compress PDFs"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "compress"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Reorder/Delete Pages"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "reorder"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Protect/Unlock PDFs"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "protect"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Images to PDF"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "img2pdf"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Scan Documents"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "scan"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "Extract Text (OCR)"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "ocr"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
+
+                MDRaisedButton:
+                    text: "PDF to Images"
+                    on_release: root.manager.transition = SlideTransition(direction="left"); root.manager.current = "pdf2img"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.accent_color
+                    size_hint: 0.45, None
+                    height: dp(50)
